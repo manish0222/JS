@@ -38,4 +38,39 @@ for(var i=0;i<arr.length;i++){
     if(i===2){continue;}
     console.log(arr[i]+ ' '+typeof(arr[i]));
 }
+/*
+node /tmp/mcSTAcsw7b.js
+Maps or Objects in JavaScript
+{ manish: 'godboles', raj: 'gharat' }
+godboles
+{
+  address: { lane: '32', top: 'yashodham' },
+  name: 'manish',
+  surName: 'godbole'
+}
+{ lane: '32', top: 'yashodham' }
+yashodham
+Arrays in JavaScript push pop splice sort() reverse()
+[ '232', 4324, 2355345.52, 'false', null, Infinity ]
+[ '232', 4324, 2355345.52, 'false', null, Infinity, 'happy' ]
+poped  item is don
+Splice has 4 arguments 
+1 is index to start 
+2 d is no of terms to be deleted 
+3) and ahead other inserted from that location
+[
+  '232',      4324,
+  2355345.52, 'false',
+  'mack',     54543453,
+  true,       'happy'
+]
+[ '232', 4324, 'mack', 54543453, true, 'happy' ]
+[ true, 'mack', 'happy', 54543453, 4324, '232' ]
+Loops in JavaScript for while and break
+true boolean
+mack string
+54543453 number
+4324 number
+232 string
 
+*/
