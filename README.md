@@ -1,0 +1,2 @@
+# JS
+basic javascript practice
