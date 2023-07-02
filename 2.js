@@ -67,7 +67,7 @@ else if(-8 && 'apple' ){console.log('truthdefined');}
 // else{}
 console.log('Explicit conversion');
 console.log(String(423)+Number("4243.5")+Number(true));
-
+console.log(Boolean('') + Boolean(0)+Boolean(null));
 
 /*                                                 Output
 andy
@@ -90,4 +90,5 @@ string
 truthdefined
 Explicit conversion
 4234243.51
+0
 */
