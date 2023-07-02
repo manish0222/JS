@@ -17,7 +17,8 @@ var str2=arr.slice(10,2);
 console.log(s.toLowerCase()+ ' '+str.toUpperCase() + ' '+str2 );
 console.log(s.charAt(3));
 var mp=arr.split(' ');
-
+// var int;console.log(int)   undefined
+var int=null;console.log(int)
 
 /*
 hello
