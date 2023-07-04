@@ -1,0 +1,90 @@
+//html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body id="body">
+        <nav>
+            <div id="sidebar" class="hide">
+                <ul>
+                    <li>Home</li>
+                    <li>Settings</li>
+                    <li>Back</li>
+                </ul>
+            </div>
+        </nav>
+        <button id="btn1">Font++</button>
+        <button id="btn2">Font--</button>
+        <br/>
+		<h1 id="heading" class="small">Hello All Manish Here
+            <br>
+            add in class by add,remove with remove and check by contains
+        </h1>
+	</body>
+</html>
+
+//css
+body 
+{
+	background-color: blueviolet;
+}
+#sidebar{
+    display: block;
+    background-color: blanchedalmond;
+}
+#btn1{
+    font-size: 25px;
+    color:darkblue;
+    background-color: darkkhaki;
+    border-radius: 10px;
+    border-width: 3px;
+}
+#btn2{
+    font-size: 25px;
+    color:darkblue;
+    background-color: rgb(228, 215, 35);
+    border-radius: 10px;
+    border-width: 3px;
+}
+.small{
+    font-size: 12px;
+}
+.big{
+    font-size: 24px;
+    /* color: blueviolet; */
+}
+
+//js
+console.log("JavaScript started");
+var btn=document.getElementById('btn1');
+var btn2=document.getElementById('btn2');
+var text=document.getElementById("heading")
+var k=window.getComputedStyle(text).fontSize;
+console.log(k);
+btn.addEventListener('click',
+    function(){
+        // if(text.classList.contains("big")){
+        //     // text.classList.remove("big");
+        // }
+        // else{
+        //     text.classList.add('big');
+        // }
+        k=(parseInt(k.substr(0,k.length-2))+5)+"px";
+        // console.log(k);
+        text.style.fontSize=k;
+    }
+)
+btn2.addEventListener('click',
+    function(){
+        // if(text.classList.contains("big")){
+        //     // text.classList.remove("big");
+        // }
+        // else{
+        //     text.classList.add('big');
+        // }
+        k=(parseInt(k.substr(0,k.length-2))-5)+"px";
+        // console.log(k);
+        text.style.fontSize=k;
+    }
+)

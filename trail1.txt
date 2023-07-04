@@ -1,0 +1,56 @@
+//html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body id="body">
+		<h1 id="countDown">5</h1>
+        <br/>
+        <button id="btn1">click me</button>
+	</body>
+</html>
+
+//css
+body 
+{
+	background-color: blueviolet;
+}
+#btn1{
+    color:darkblue;
+    background-color: darkkhaki;
+    border-radius: 10px;
+    border-width: 3px;
+}
+
+//js
+console.log("JavaScript started");
+var init=document.getElementById('countDown');
+console.log("val "+init.innerHTML);
+var count=init.innerHTML;
+var bodytag=document.getElementById("body");
+var interval=setInterval(function(){
+    count>0 ? --count:0;
+    init.innerHTML=count;
+    //var val=count%2==0 ?"aqua":"green";
+
+   // bodytag.style.backgroundColor=val;
+    bodytag.style.textAlign="center";
+    console.log(val+" "+init.innerHTML);
+    if(count<=0){
+        clearInterval(interval);
+    }
+},1000)
+
+var btn=document.getElementById('btn1');
+function ab(){
+    alert("button pressed");
+    bodytag.style.backgroundColor=
+    ("rgb("
+    +Math.floor(Math.random()*255)+","
+    +Math.floor(Math.random()*255)+","
+    +Math.floor(Math.random()*255)+")")
+
+    // btn.style.paddingLeft="3px";
+}
+btn.onclick=ab;
