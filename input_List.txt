@@ -1,0 +1,49 @@
+//html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body>
+		<section>
+			<input type="text" id="inputval">
+			<button id="addItem">add item</button>
+			<ul id='todo-list'>
+				<li>list 1</li>
+				<li>list 2</li>
+			</ul>
+		</section>
+	</body>
+</html>
+
+//css
+body 
+{
+	
+}
+#addItem{
+    padding: 10px;
+    background-color: blueviolet;
+    border-radius: 30px;
+}
+#todo-list{
+    border-radius: 3px;
+    box-sizing: border-box;
+    border-color: black;
+}
+
+//javascript
+var list=document.getElementById('todo-list');
+var btn=document.getElementById('addItem');
+var inputval=document.getElementById('inputval');
+btn.addEventListener('click',function(){
+    var ele=document.createElement('li');
+    var textNode=document.createTextNode(inputval.value);
+    console.log(textNode.textContent);
+    ele.appendChild(textNode);
+    ele.id="item"+(list.childElementCount+1);
+    list.appendChild(ele);
+    var firstItem=list.firstElementChild;
+    // console.log(list.childElementCount);
+    list.insertBefore(ele,firstItem);
+})
