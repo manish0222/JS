@@ -1,0 +1,61 @@
+//html
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+	</head>
+	<body>
+		<section>
+			<input type="text" id="inputval">
+			<button id="addItem">add item</button>
+			<ul id='todo-list'>
+				<li>list 1</li>
+				<li>list 2</li>
+			</ul>
+		</section>
+	</body>
+</html>
+
+//css
+body 
+{
+	
+}
+#addItem{
+    padding: 10px;
+    background-color: blueviolet;
+    border-radius: 30px;
+}
+#todo-list{
+    border-radius: 3px;
+    box-sizing: border-box;
+    border-color: black;
+}
+
+//javascript
+var list=document.getElementById('todo-list');
+var btn=document.getElementById('addItem');
+var inputval=document.getElementById('inputval');
+var inputvalue="";
+inputval.addEventListener('input',function(e){
+    inputvalue=e.target.value;
+})
+inputval.addEventListener('keyup',function(e){
+    if(e.keyCode === 13){
+        console.log(inputvalue+" here");
+        addListItem();
+    }
+})
+function addListItem(){
+    if(inputvalue!=='' || inputval!==undefined){
+        var ele=document.createElement('li');
+        var textNode=document.createTextNode(inputvalue);
+        console.log(textNode+" node");
+        ele.appendChild(textNode);
+        ele.id="item"+(list.childElementCount+1);
+        list.appendChild(ele);
+        var firstItem=list.firstElementChild;
+        // console.log(list.childElementCount);
+        list.insertBefore(ele,firstItem);
+    }
+}
